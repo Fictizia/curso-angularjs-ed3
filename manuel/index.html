@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+
+	<div ng-controller="nameController as nameCtrl">
+		
+		<h1>Hola {{ nameCtrl.user.name || ", ¿Cómo te llamas?" }}</h1>
+
+		Nombre: <input type="text" id="name" name="name" ng-model="nameCtrl.user.name">
+
+		<button ng-click="nameCtrl.clear()">Clear</button>
+	</div>
+
+	<div ng-controller="nameController as nameCtrl">
+		
+		<h1>Hola2 {{ nameCtrl.user.name || ", ¿Cómo te llamas?" }}</h1>
+
+		Nombre2: <input type="text" id="name" name="name" ng-model="nameCtrl.user.name">
+
+		<button ng-click="nameCtrl.clear()">Clear2</button>
+	</div>
+
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+		<!-- App -->
+		<script type="text/javascript" src="js/app.js"></script>
+
+		<!-- Controllers -->
+		<script type="text/javascript" src="controllers/name.js"></script>
+
+		<!-- Services -->
+		<script type="text/javascript" src="services/user.js"></script>
+
+
+	</body>
+</html>
