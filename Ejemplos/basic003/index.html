@@ -6,7 +6,7 @@
 
 			<h1>Hola {{Name.user.name}} </h1>
 
-			Nombre: <input type="text" ng-model="Name.user.name" />
+			(ctrl) Nombre: <input type="text" ng-model="Name.user.name" />
 
 			<button ng-click="Name.clear()">Clear</button>
 
@@ -18,9 +18,8 @@
 
 			<h1>Hola {{Name.user.name}} </h1>
 
-			Nombre: <input type="text" ng-model="Name.user.name" />
-			
-			<field />
+			(dir) <field name="NombreASD"></field>
+			(dir) <component-field name="Nombre"></component-field>
 
 			<button ng-click="Name.clear()">Clear</button>
 
@@ -40,6 +39,7 @@
 
 		<!-- Directives -->
 		<script type="text/javascript" src="directives/field.js"></script>
+		<script type="text/javascript" src="directives/componentField/componentField.js"></script>
 
 	</body>
 </html>

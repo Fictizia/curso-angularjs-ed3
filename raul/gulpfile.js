@@ -10,7 +10,7 @@ gulp.task('serve', function() {
     .pipe(webserver({
       host: '0.0.0.0',
       port: 3000,
-      fallback: 'index.html',
+      // fallback: 'index.html',
       livereload: true
     }))
 });
