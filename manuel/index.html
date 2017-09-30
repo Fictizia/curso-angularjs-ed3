@@ -2,27 +2,47 @@
 <html ng-app="app">
 	<head>
 		<meta charset="utf-8">
+		<title>Hello Moto</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	</head>
 
 	<body>
 
 	<div ng-controller="nameController as nameCtrl">
 		
-		<h1>Hola {{ nameCtrl.user.name || ", ¿Cómo te llamas?" }}</h1>
+		<h1>(CTRL) Hola {{ nameCtrl.user.name || "¿Cómo te llamas?" }}</h1>
 
 		Nombre: <input type="text" id="name" name="name" ng-model="nameCtrl.user.name">
 
-		<button ng-click="nameCtrl.clear()">Clear</button>
+		<button ng-click="nameCtrl.clear()">Borrar</button>
 	</div>
 
 	<div ng-controller="nameController as nameCtrl">
 		
-		<h1>Hola2 {{ nameCtrl.user.name || ", ¿Cómo te llamas?" }}</h1>
+		<h1>(DIR) Hello {{ nameCtrl.user.name || "What's your name?" }}</h1>
 
-		Nombre2: <input type="text" id="name" name="name" ng-model="nameCtrl.user.name">
+		<field name="Mi nombre" icon="apps"/>
 
-		<button ng-click="nameCtrl.clear()">Clear2</button>
+		<button ng-click="nameCtrl.clear()">Clear</button>
+		
 	</div>
+
+	<br><br>
+
+	<div>
+		<span>
+		<a href="https://github.com/CodingCarlos/angular-demos" target="_blank">https://github.com/CodingCarlos/angular-demos</a>
+		</span>
+		<br>Ejecutar GULP<br>
+
+		npm init<br>
+		npm install -S gulp gulp-webserver gulp-debug gulp-concat gulp-minify gulp-watch<br><br><br>
+
+		<h2>¡DEJA LAS COSAS MEJOR DE COMO LAS ENCUENTRES!</h2>
+
+	</div>
+
 
 		<!-- AngularJS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -35,6 +55,10 @@
 
 		<!-- Services -->
 		<script type="text/javascript" src="services/user.js"></script>
+
+
+		<!-- Directives -->
+		<script type="text/javascript" src="directives/field.js"></script>
 
 
 	</body>
