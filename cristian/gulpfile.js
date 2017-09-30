@@ -4,13 +4,13 @@ var debug = require('gulp-debug');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify');
 var watch = require('gulp-watch');
- 
-gulp.task('serve', function() {  
+
+gulp.task('serve', function() {
   gulp.src('./')
     .pipe(webserver({
       host: '0.0.0.0',
       port: 3000,
-      fallback: 'index.html',
+      // fallback: 'index.html',
       livereload: true
     }))
 });
@@ -37,7 +37,7 @@ gulp.task('html', function() {
 gulp.task('build', ['js', 'html']);
 
 
-gulp.task('watch', function() {  
+gulp.task('watch', function() {
   gulp.watch('./*/**.js', ['js'])
   gulp.watch('./*/**.html', ['html'])
 //  gulp.watch(['./src/**/*.css', './src/**/*.css'], ['styles'])
