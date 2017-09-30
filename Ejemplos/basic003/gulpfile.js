@@ -6,7 +6,7 @@ var minify = require('gulp-minify');
 var watch = require('gulp-watch');
  
 gulp.task('serve', function() {  
-  gulp.src('./dist')
+  gulp.src('./')
     .pipe(webserver({
       host: '0.0.0.0',
       port: 3000,
