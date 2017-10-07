@@ -1,0 +1,7 @@
+<div ng-controller= "timeController as Time">
+	<input ng-model="Time.code" type="text">
+	<button ng-click="Time.search()">buscar</button>
+	<div ng-repeat="bus in Time.time.list">
+		<ul>{{bus.lineId}} {{bus.destination}} -> {{bus.busTimeLeft}}</ul>
+	</div>
+</div>
