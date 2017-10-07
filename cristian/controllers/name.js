@@ -1,6 +1,7 @@
 
       //Controller
       angular.module('app').controller('nameController', nameCtrl);
+
       function nameCtrl(user){
 
         console.log('Soy un Controller');

@@ -1,0 +1,73 @@
+<html ng-app="app">
+	<head></head>
+	<body>
+
+		<div ng-controller="nameController as Name">
+
+			<h1>Hola {{Name.user.name}} </h1>
+
+			Nombre: <input type="text" ng-model="Name.user.name" />
+
+			<button ng-click="Name.clear()">Clear</button>
+
+		</div>
+
+		<hr />
+
+		<div ng-controller="nameController as Name">
+
+			<h1>Hola {{Name.user.name}} </h1>
+
+			Nombre: <input type="text" ng-model="Name.user.name" />
+
+			<button ng-click="Name.clear()">Clear</button>
+
+		</div>
+
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+		<script type="text/javascript">
+
+			// App
+			angular.module('app', []);
+
+
+			// Controller
+			angular.module('app').controller('nameController', nameCtrl);
+
+			function nameCtrl(user) {
+				console.log('Soy un controllador');
+
+				var self = this;
+
+				self.user = user;
+
+				self.clear = function() {
+
+					if(confirm('¿Quieres limpiar los datos?')) {
+						self.user.name = '';
+					}
+					
+				}
+			}
+
+
+			// Services
+			angular.module('app').service('user', userService);
+
+			function userService() {
+				console.log('Soy un servicio');
+
+				var user = {
+					name: ''
+				};
+
+				return user;
+
+			}
+
+		</script>
+
+	</body>
+</html>

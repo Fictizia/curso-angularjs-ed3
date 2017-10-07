@@ -13,18 +13,20 @@
     <script src="controllers/name.js"></script>
     <!-- Services -->
     <script src="services/user.js"></script>
+    <!-- Directives -->
+    <script src="directives/field.js"></script>
+
 
 
     <div ng-controller="nameController as Name">
       <h1>Hola {{Name.user.name}}</h1>
-      Name: <input type="text" ng-model="Name.user.name"/>
+      (ctrl) Name: <input type="text" ng-model="Name.user.name"/>
       <button type="button" name="button" ng-click="Name.clear()">Clear</button>
     </div>
 
+
     <div ng-controller="nameController as Name">
-      <h1>Hola2 {{Name.user.name}}</h1>
-      Name:2 <input type="text" ng-model="Name.user.name"/>
-      <button type="button" name="button" ng-click="Name.clear()">Clear2</button>
+      <field />
     </div>
 
 

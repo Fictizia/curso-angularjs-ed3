@@ -2,7 +2,7 @@
 
 		angular.module('app').controller('nameController', namectrl);
 
-		function namectrl(user){
+		function namectrl(user) {
 			console.log('soy un controllador');
 			var self = this;
 
@@ -11,7 +11,7 @@
 			self.name = '';
 			self.clear = function(){
 				if(confirm ('¿quieres limpiar los datos?')){
-					self.name = '';
+					self.user.name = '';
 				}
-			}
+			};
 		}
