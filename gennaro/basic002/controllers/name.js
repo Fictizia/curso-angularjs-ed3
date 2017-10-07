@@ -1,9 +1,8 @@
 // Controller
-angular.module('app').controller('nameController', ['user', '$scope', nameCtrl]);
+angular.module('app').controller('nameController', nameCtrl);
 
-function nameCtrl(user, $scope) {
-	console.log("$scope");
-	console.log($scope);
+function nameCtrl(user) {
+	console.log('Soy un controllador');
 
 	var self = this;
 
