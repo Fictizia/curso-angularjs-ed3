@@ -1,10 +1,10 @@
 
       //Controller
-      angular.module('app').controller('nameController', nameCtrl);
+      angular.module('app').controller('nameController',['user', nameCtrl]);
 
       function nameCtrl(user){
 
-        console.log('Soy un Controller');
+        console.log("");
 
         var self = this;
         self.Name = '';
