@@ -25,13 +25,13 @@ gulp.task('js', function() {
 	            min:'.js'
 	        }
         }))
-		.pipe(gulp.dest("./dist/js"));
+		.pipe(gulp.dest("./js"));
 });
 
 gulp.task('html', function() {
 	gulp.src(["./*/**.html"])
 		.pipe(debug({title: 'Move HTML:'}))
-		.pipe(gulp.dest("./dist"));
+		.pipe(gulp.dest("./"));
 });
 
 gulp.task('build', ['js', 'html']);
