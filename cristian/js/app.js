@@ -8,10 +8,10 @@
       		.when("/", {
       			templateUrl : "views/main.html"
       		})
-      		.when("/red", {
-      			templateUrl : "views/red.html"
+      		.when("/time", {
+      			templateUrl : "views/time.html"
       		})
-      		.when("/green", {
-      			templateUrl : "views/green.html"
+      		.when("/map", {
+      			templateUrl : "views/map.html"
       		});
       });

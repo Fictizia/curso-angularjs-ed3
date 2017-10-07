@@ -2,31 +2,49 @@
 <html ng-app="app">
   <head>
     <meta charset="utf-8">
-    <title>First App</title>
+    <title>Bus App</title>
   </head>
   <body>
+
     <!-- Angular ---->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- App -->
     <script src="js/app.js"></script>
     <!-- Controllers -->
-    <script src="controllers/name.js"></script>
+    <script src="controllers/arriveStop.js"></script>
     <!-- Services -->
-    <script src="services/user.js"></script>
+    <script src="services/stopTime.js"></script>
     <!-- Directives -->
     <script src="directives/field.js"></script>
 
+    <!-- Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- <div ng-include="'views/main.html'"></div> -->
+
+<!--
     <nav>
     	<a href="#/">Main</a>
-    	<a href="#/red">Red</a>
-    	<a href="#/green">Green</a>
-    </nav>
+    	<a href="#/time">Time</a>
+    	<a href="#/map">Map</a>
+    </nav> -->
+
+<nav>
+  <div class="nav-wrapper" style="background-color:#00838F">
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href="#/">Main</a></li>
+    	<li><a href="#/time">Time</a></li>
+    	<li><a href="#/map">Map</a></li>
+    </ul>
+  </div>
+</nav>
 
     <div ng-view></div>
 
-    <div ng-controller="nameController as Name">
+    <!-- <div ng-controller="nameController as Name">
       <h1>Hola {{Name.user.name}}</h1>
       (ctrl) Name: <input type="text" ng-model="Name.user.name"/>
       <button type="button" name="button" ng-click="Name.clear()">Clear</button>
@@ -35,7 +53,7 @@
 
     <div ng-controller="nameController as Name">
       <field />
-    </div>
+    </div> -->
 
 
 
