@@ -7,7 +7,7 @@
       <div class="col s12 m6">
         <input id="input_text" type="text" data-length="0" ng-model="Arrive.code">
         <div style="text-align:center">
-          <a class="btn-floating btn-large waves-effect waves-light" ng-click="Arrive.search()" style="background-color=#00838F;"><i class="mdi-content-add">+</i></a>
+          <a class="btn-floating btn-large waves-effect waves-light" ng-click="Arrive.search()" style="background-color=#00838F;"><i class="mdi-content-add">bus</i></a>
         </div>
       </div>
 
@@ -22,7 +22,7 @@
                    <span class="card-title">{{bus.destination}}</span>
                    <p>Código: {{bus.stopId}}</p>
                    <p>Línea: {{bus.lineId}}</p>
-                   <p>Tiempo de llegada: {{bus.busTimeLeft}} minutos</p>
+                   <p>Tiempo de llegada: {{bus.busTimeLeft | minutes | number:2 }} minutos</p>
                  </div>
                </div>
              </div>
