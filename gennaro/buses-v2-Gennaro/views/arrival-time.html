@@ -1,0 +1,13 @@
+<div class="container" ng-controller="ArrivalTimeController as ArrivalTime">
+	
+	<input type="text" name="stop-code" ng-model="ArrivalTime.code"> 
+	<button ng-click="ArrivalTime.search()">Search</button>
+
+	<div>
+		<div ng-repeat="bus in ArrivalTime.service.list" | orderBy:'lineId'>
+			{{ bus.lineId }} {{ bus.destination}} -> {{bus.busTimeLeft | minutes | number:2}} Minutos.
+			<hr />
+		</div>
+	</div>
+
+</div>
