@@ -10,7 +10,7 @@
         self.search = search;
 
        function search(){
-        //  list.get();
+         
          list.get(self.code);
 
        }
