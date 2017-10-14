@@ -30,6 +30,27 @@
 
 	<br><br>
 
+	<div ng-controller="ArrivalTimeController as ArrivalTimeCtrl">
+
+		<input type="text" ng-model="ArrivalTimeCtrl.code"/>
+		
+		<button ng-click="ArrivalTimeCtrl.search()">BUSCAR</button>
+		
+
+		<div ng-repeat="bus in ArrivalTimeCtrl.service.list | limitTo: 5 | orderBy: 'lineId'"> 
+			<span>{{ bus.lineId }} - </span>
+			<span>{{ bus.destination }} >> </span>
+			<span>{{ bus.busTimeLeft | minutes:2 }} min</span>
+
+		</div>
+
+	</div>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+
 	<div>
 		<span>
 		<a href="https://github.com/CodingCarlos/angular-demos" target="_blank">https://github.com/CodingCarlos/angular-demos</a>
@@ -46,19 +67,26 @@
 
 		<!-- AngularJS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
 		<!-- App -->
 		<script type="text/javascript" src="js/app.js"></script>
 
 		<!-- Controllers -->
 		<script type="text/javascript" src="controllers/name.js"></script>
+		<script type="text/javascript" src="controllers/arrival-time.js"></script>
 
 		<!-- Services -->
 		<script type="text/javascript" src="services/user.js"></script>
+		<script type="text/javascript" src="services/arrival-time.js"></script>
 
 
 		<!-- Directives -->
 		<script type="text/javascript" src="directives/field.js"></script>
+
+
+		<!-- Filters -->
+		<script type="text/javascript" src="filters/minutes.js"></script>
 
 
 	</body>
