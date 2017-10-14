@@ -11,6 +11,7 @@
 			self.search = search;
 			function search(){
 
-				self.time.get();
+				self.time.get(self.code);
+
 			}
 		}
