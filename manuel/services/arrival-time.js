@@ -14,9 +14,9 @@ function arrivalTimeService($http) {
 	return arrivalTime;
 	
 
-	function get( ) {
+	function get(stopId) {
 
-		$http.get('http://192.168.1.20:3000/stop/609')
+		$http.get('http://192.168.1.20:3000/stop/' + stopId)
 				.then(function(response) {
 					arrivalTime.list = response.data.arrives;
 				});
