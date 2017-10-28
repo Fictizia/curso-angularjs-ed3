@@ -1,0 +1,40 @@
+@import "compass/css3";
+
+@import url("https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css");
+@import url("https://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css");
+
+.headline {
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+}
+.headline::before, 
+.headline::after {
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: lightblue;
+  display: block;
+  left: 0;
+  position: absolute;
+}
+.headline::before {
+  top: -6px;
+}
+.headline::after {
+  bottom: -6px;
+}
+.opacity-small {
+  opacity: 0.7;
+  filter: Alpha(opacity=70);
+}
+.opacity-medium {
+  opacity: 0.5;
+  filter: Alpha(opacity=50);
+}
+.opacity-large {
+  opacity: 0.25;
+  filter: Alpha(opacity=25);
+}
