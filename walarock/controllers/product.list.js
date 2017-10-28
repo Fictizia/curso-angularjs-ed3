@@ -18,6 +18,7 @@ function ProductListCtrl(productService) {
 
 	// On Run...
 	console.log('ProductListController running!');
+	console.log(self.service.list);
 
 
 	// Internal functions

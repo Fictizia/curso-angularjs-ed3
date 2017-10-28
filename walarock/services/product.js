@@ -20,13 +20,13 @@ function productService($http) {
 
 	function init() {
 		return product.list = {
-			1: {
+			"1": {
 				"title": "product 1",
 				"description": "description 1",
 				"photos": ['https://cloud.google.com/images/pricing/free.svg'],
 				"price": 10.0
 			},
-			2: {
+			"2": {
 				"title": "product 2",
 				"description": "description 2",
 				"photos": [],
