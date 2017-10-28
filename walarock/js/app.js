@@ -1,0 +1,4 @@
+// App
+
+angular.module('app', []);
+
