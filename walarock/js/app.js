@@ -9,7 +9,7 @@ angular.module('app').config(function($routeProvider) {
 		.when("/add", {
 			templateUrl: "views/add.html"
 		})
-		.when("/product", {
+		.when("/product/:id", {
 			templateUrl: "views/product.html"
 		})
 		.otherwise({
