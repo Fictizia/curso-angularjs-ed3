@@ -40,7 +40,7 @@
 		<div ng-repeat="bus in ArrivalTimeCtrl.service.list | limitTo: 5 | orderBy: 'lineId'"> 
 			<span>{{ bus.lineId }} - </span>
 			<span>{{ bus.destination }} >> </span>
-			<span>{{ bus.busTimeLeft | minutes:2 }} min</span>
+			<span>{{ bus.busTimeLeft | minutes }} min</span>
 
 		</div>
 

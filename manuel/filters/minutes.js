@@ -7,6 +7,7 @@ function minutesFilter() {
 
 	return function(input, decimals) {
 		input = Number(input) || 0;
+		decimals = Number(decimals) || 0;
 
 		var out = Number(input / 60).toFixed(decimals);
 
@@ -14,7 +15,7 @@ function minutesFilter() {
 			out = 0;
 		} 
 
-		if(input===999999){
+		if(out > 20){
 			out = '+20';
 		} 
 
