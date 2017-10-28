@@ -1,1 +1,19 @@
-Add
+<div ng-controller="addController as add">
+    <form name="userForm" novalidate>
+      <label for="titulo">Nombre</label><br />
+      <input name="name" type="text" ng-model="add.title" />
+      <br />
+      <label for="descripcion">descripcion</label><br />
+      <input name="descripcion" type="text" ng-model="add.description" />
+      <br />
+      <label for="fotos">Fotos</label><br />
+      <input name="fotos" type="text" ng-model="add.photos" />
+      <br />
+      <label for="precio">Precio</label><br />
+      <input name="precio" type="number" ng-model="add.price" />
+      <br /><br />
+      <input type="button" ng-click="reset()" value="Limpiar" />
+      <input type="submit" ng-click="add.update()" value="Guardar" />
+    </form>
+  </div>
+</body>
