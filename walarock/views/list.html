@@ -1,5 +1,6 @@
 <div class="container" ng-controller="ProductListController as productListCtrl">
-	<div class="row" ng-repeat="(productId, product) in productListCtrl.service.list" >
+	<cards class="row" ng-repeat="(productId, product) in productListCtrl.service.list" key="productId" value="product"></cards>
+<!-- 	<div class="row" ng-repeat="(productId, product) in productListCtrl.service.list" >
 		{{ productId }}
 		{{ product.title }}
 		{{ product.description }}
@@ -7,4 +8,5 @@
 		{{ product.price }}
 		<a href="#!/product/{{ productId }}">Ir</a>
 	</div>
+ -->
 </div>
