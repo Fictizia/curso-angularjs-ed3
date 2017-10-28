@@ -1,1 +1,11 @@
-Product
+<div ng-controller="ProductController as Product">
+	
+	<img ng-src="{{Product.image}}">
+
+	<h2>{{Product.name}}</h2>
+
+	<p>{{Product.description}}</p>
+
+	<a ng-click="Product.buy()">buy</a>
+
+</div>

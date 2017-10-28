@@ -14,6 +14,8 @@ function productService($http) {
 		getKeys: getKeys
 	};
 
+	init();
+
 	return product;
 
 	function init() {
@@ -21,7 +23,7 @@ function productService($http) {
 			1: {
 				"title": "product 1",
 				"description": "description 1",
-				"photos": [],
+				"photos": ['https://cloud.google.com/images/pricing/free.svg'],
 				"price": 10.0
 			},
 			2: {
