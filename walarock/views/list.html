@@ -1,12 +1,4 @@
 <div class="container" ng-controller="ProductListController as productListCtrl">
-	<cards class="row" ng-repeat="(productId, product) in productListCtrl.service.list" key="productId" value="product"></cards>
-<!-- 	<div class="row" ng-repeat="(productId, product) in productListCtrl.service.list" >
-		{{ productId }}
-		{{ product.title }}
-		{{ product.description }}
-		{{ product.photos }}
-		{{ product.price }}
-		<a href="#!/product/{{ productId }}">Ir</a>
-	</div>
- -->
+	<!-- <cards class="row" ng-repeat="(productId, product) in productListCtrl.service.objectList" key="productId" value="product"></cards> -->
+	<cards class="row" ng-repeat="product in productListCtrl.service.list" key="product.$id" value="product"></cards>
 </div>

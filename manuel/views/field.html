@@ -1,2 +1,7 @@
-<i class="material-icons">{{ icon }}</i>
-Name: <input type="text" ng-model="user.name">
+
+
+<div class="input-field col s6">
+          <i class="material-icons prefix">{{ icon }}</i>
+          <input id="{{ id }}" type="text" class="validate" ng-model="user.name">
+          <label for="{{ id }}" data-error="wrong" ng-class="{active:user.name}">{{ title }}</label>
+</div>

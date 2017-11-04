@@ -21,10 +21,28 @@
 		<div ng-view></div>
 		<!-- <cards key="1234"></cards> -->
 
+		<!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyDM7Lb3-0YUUxdFG2xcQQb82Fxwugwuv-Y",
+		    authDomain: "real-angular.firebaseapp.com",
+		    databaseURL: "https://real-angular.firebaseio.com",
+		    projectId: "real-angular",
+		    storageBucket: "real-angular.appspot.com",
+		    messagingSenderId: "114851401658"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+
 
 		<!-- AngularJS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+		<!-- AngularFire -->
+		<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
 		<!-- Materialize -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
