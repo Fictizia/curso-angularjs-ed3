@@ -3,71 +3,50 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Hello Moto</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+		rel="stylesheet">
+
 	</head>
 
 	<body>
 
-	<div ng-controller="nameController as nameCtrl">
-		
-		<h1>(CTRL) Hola {{ nameCtrl.user.name || "¿Cómo te llamas?" }}</h1>
+		<div ui-view="topbar"></div>
 
-		Nombre: <input type="text" id="name" name="name" ng-model="nameCtrl.user.name">
-
-		<button ng-click="nameCtrl.clear()">Borrar</button>
-	</div>
-
-	<div ng-controller="nameController as nameCtrl">
-		
-		<h1>(DIR) Hello {{ nameCtrl.user.name || "What's your name?" }}</h1>
-
-		<field name="Mi nombre" icon="apps"/>
-
-		<button ng-click="nameCtrl.clear()">Clear</button>
-		
-	</div>
-
-	<br><br>
-
-	<div ng-controller="ArrivalTimeController as ArrivalTimeCtrl">
-
-		<input type="text" ng-model="ArrivalTimeCtrl.code"/>
-		
-		<button ng-click="ArrivalTimeCtrl.search()">BUSCAR</button>
-		
-
-		<div ng-repeat="bus in ArrivalTimeCtrl.service.list | limitTo: 5 | orderBy: 'lineId'"> 
-			<span>{{ bus.lineId }} - </span>
-			<span>{{ bus.destination }} >> </span>
-			<span>{{ bus.busTimeLeft | minutes }} min</span>
-
+		<div class="container">
+			
+			<div ui-view="content"></div>
 		</div>
 
-	</div>
-	<br><br>
-	<br><br>
-	<br><br>
-	<br><br>
-	<br><br>
+		<div ui-view="footer"></div>
 
-	<div>
-		<span>
-		<a href="https://github.com/CodingCarlos/angular-demos" target="_blank">https://github.com/CodingCarlos/angular-demos</a>
-		</span>
-		<br>Ejecutar GULP<br>
 
-		npm init<br>
-		npm install -S gulp gulp-webserver gulp-debug gulp-concat gulp-minify gulp-watch<br><br><br>
+	<!-- 	
 
-		<h2>¡DEJA LAS COSAS MEJOR DE COMO LAS ENCUENTRES!</h2>
+		<br><br>
 
-	</div>
+		<div ng-controller="ArrivalTimeController as ArrivalTimeCtrl">
+
+			<input type="text" ng-model="ArrivalTimeCtrl.code"/>
+			
+			<button ng-click="ArrivalTimeCtrl.search()">BUSCAR</button>
+			
+
+			<div ng-repeat="bus in ArrivalTimeCtrl.service.list | limitTo: 5 | orderBy: 'lineId'"> 
+				<span>{{ bus.lineId }} - </span>
+				<span>{{ bus.destination }} >> </span>
+				<span>{{ bus.busTimeLeft | minutes }} min</span>
+
+			</div>
+
+		</div>
+	-->	
+
 
 
 		<!-- AngularJS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0/angular-ui-router.js"></script>
 
 		<!-- App -->
 		<script type="text/javascript" src="js/app.js"></script>

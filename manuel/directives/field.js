@@ -13,6 +13,8 @@ function fieldDirective(user) {
 	function prelink(scope, element, attrs) {
 		scope.user = user;
 		scope.icon = attrs.icon;
+		scope.title = attrs.title;
+		scope.id = attrs.id;
 	}
 
 }
