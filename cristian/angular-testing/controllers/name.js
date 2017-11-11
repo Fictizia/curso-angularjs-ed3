@@ -10,11 +10,15 @@ function NameController() {
   self.isValid = isValid;
 
   function isValid() {
+
     var size = self.name.length;
+
     if (size < 2 || size > 7) {
       return false;
     } else {
       return true;
     }
+
   }
+
 }
