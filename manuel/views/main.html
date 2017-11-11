@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="section s12 m12">
+        <h5 class="card-title">Name Controller & Directive</h5>
+    </div>
+    <div class="divider"></div>
+
+    <div class="card-action" ng-controller="nameController as nameCtrl">
+      
+        <h6>(CTRL) Hola {{ nameCtrl.user.name || "¿Cómo te llamas?" }}</h6>
+
+        Nombre: <input type="text" id="name" name="name" ng-model="nameCtrl.user.name">
+
+        <button ng-click="nameCtrl.clear()">Borrar</button>
+    </div>
+
+    <div class="card-action" ng-controller="nameController as nameCtrl">
+      
+        <div class="row">
+            <h6>(DIR) Hello {{ nameCtrl.user.name || "What's your name?" }}</h6>
+        </div>
+
+        <div class="row">
+            <field name="Mi nombre" icon="apps" id="nombre" title="Name"></field>
+        </div>
+
+        <div class="divider"></div>
+        <div class="row">
+            <button ng-click="nameCtrl.clear()">Clear</button>
+        </div>
+
+      
+    </div>
+
+</div>
