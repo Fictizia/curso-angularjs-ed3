@@ -19,9 +19,9 @@
 <body ng-app="app">
 	<script src="services/user.js"></script>
 
-	<div ng-controller="PasswordCtrlr">
-		Password: <input type="text" ng-model="password" /> <button ng-click="grade()">CHECK</button> <br />
-		<strong id="strenght">{{strength}}</strong><span ng-if="strength.length > 0">, becouse has {{password | length}} chars</span>
+	<div ng-controller="PasswordCtrlr as pass">
+		Password: <input type="text" ng-model="pass.password" /> <button ng-click="pass.grade()">CHECK</button> <br />
+		<strong id="strenght">{{pass.strength}}</strong><span ng-if="pass.strength.length > 0">, becouse has {{pass.password | length}} chars</span>
 	</div>
 
 	<script src="controllers/password.js"></script>

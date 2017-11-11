@@ -8,27 +8,26 @@ describe('PasswordCtrlr', function() {
     $controller = _$controller_;
   }));
 
-  describe('$scope.grade', function() {
-    var $scope, controller;
+  describe('grade', function() {
+    var controller;
 
     beforeEach(function() {
-      $scope = {};
-      controller = $controller('PasswordCtrlr', { $scope: $scope });
+      controller = $controller('PasswordCtrlr', { });
     });
 
     it('strength = "strong" if >8 chars', function() {
-      $scope.password = 'longerthaneightchars';
-      $scope.grade();
-      expect($scope.strength).toEqual('strong');
+      controller.password = 'longerthaneightchars';
+      var grade = controller.grade();
+      expect(controller.strength).toEqual('strong');
     });
 
     it('strength == "weak" if <3 chars', function() {
-      $scope.password = 'a';
-      $scope.grade();
-      expect($scope.strength).toEqual('weak');
+      controller.password = 'a';
+      var grade = controller.grade();
+      expect(controller.strength).toEqual('weak');
     });
 
     // No test for medium, becouse of yes.
-    
+
   });
 });
