@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Fri Nov 10 2017 22:16:40 GMT+0100 (Hora estándar romance)
+// Generated on Sat Nov 11 2017 10:38:39 GMT+0100 (CET)
 
 module.exports = function(config) {
   config.set({
@@ -22,14 +22,14 @@ module.exports = function(config) {
       './js/app.js',
       './filters/length.js',
       './services/user.js',
-      './controllers/password.js',
       './controllers/name.js',
+      './controllers/password.js',
       './directives/aGreatEye.js',
       // Tests
       './filters/length.spec.js',
       './services/user.spec.js',
-      './controllers/password.spec.js',
       './controllers/name.spec.js',
+      './controllers/password.spec.js',
       './directives/aGreatEye.spec.js'
     ],
 

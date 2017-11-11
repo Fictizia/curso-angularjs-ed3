@@ -1,6 +1,6 @@
 describe('Password View', function() {
   it('should check strength', function() {
-    browser.get('http://localhost/angular-testing/');
+    browser.get('http://localhost:3000/angular-testing/');
 
     // Find the element with ng-model="password" and type "a" into it
     element(by.model('password')).sendKeys('a');

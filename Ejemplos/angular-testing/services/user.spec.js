@@ -1,4 +1,4 @@
-describe('Users factory', function() {
+describe('Users service', function() {
   var Users;
   var userList = [
     {
@@ -72,9 +72,11 @@ describe('Users factory', function() {
     });
 
     it('should return one user async object if it exists', function() {
-      Users.findById('2', function(result) {
+      Users.findByIdAsync('2', function(result) {
         expect(result).toEqual(singleUser);
       });
     });
   });
+
+  
 });

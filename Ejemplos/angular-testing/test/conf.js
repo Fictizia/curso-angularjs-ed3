@@ -1,5 +1,7 @@
 exports.config = {
   framework: 'jasmine',
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['password.e2e.js']
+  specs: [
+  	'password.e2e.js'
+  ]
 };

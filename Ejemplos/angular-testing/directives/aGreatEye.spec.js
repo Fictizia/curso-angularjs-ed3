@@ -13,7 +13,7 @@ describe('Unit testing great quotes', function() {
     $rootScope = _$rootScope_;
   }));
 
-  it('Replaces the element with the appropriate content', function() {
+  it('The element containss the appropriate content', function() {
     // Compile a piece of HTML containing the directive
     var element = $compile("<a-great-eye></a-great-eye>")($rootScope);
     // fire all the watches, so the scope expression {{1 + 1}} will be evaluated
@@ -22,12 +22,17 @@ describe('Unit testing great quotes', function() {
     expect(element.html()).toContain("lidless, wreathed in flame, 2 times");
   });
 
-  it('Dont Replaces the element with the appropriate content', function() {
+  it('The element replaces the directive tag', function() {
     // Compile a piece of HTML containing the directive
-    var element = $compile("<aGreatEye></aGreatEye>")($rootScope);
+    var element = $compile("<a-great-eye></a-great-eye>")($rootScope);
     // fire all the watches, so the scope expression {{1 + 1}} will be evaluated
     $rootScope.$digest();
+
+    console.log(element);
+
     // Check that the compiled element contains the templated content
-    expect(element.html()).toEqual("");
+    expect(element.html()).not.toContain('');
   });
+
+
 });

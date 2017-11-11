@@ -9,10 +9,9 @@ describe('NameController', function() {
   }));
 
   describe('isValid', function() {
-    var $scope, controller;
+    var controller;
 
     beforeEach(function() {
-      $scope = {};
       controller = $controller('NameController', {});
     });
 
