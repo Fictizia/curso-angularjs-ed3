@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Angular Testing demos</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script> -->
+
+	<script src="js/app.js"></script>
+</head>
+
+<body ng-app="app">
+	<script src="services/user.js"></script>
+
+	<div ng-controller="PasswordCtrlr">
+		Password: <input type="text" ng-model="password" /> <button ng-click="grade()">CHECK</button> <br />
+		<strong id="strenght">{{strength}}</strong><span ng-if="strength.length > 0">, becouse has {{password | length}} chars</span>
+	</div>
+
+	<script src="controllers/password.js"></script>
+	<script src="controllers/user.js"></script>
+	<script src="filters/length.js"></script>
+	<script src="services/user.js"></script>
+</body>
+</html>

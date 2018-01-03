@@ -1,0 +1,32 @@
+<div class="container" ng-controller="ArrivalTimeController as ArrivalTime">
+
+	<p>
+		<button ng-click="ArrivalTime.firechange()">Change!!</button><br /> 
+		Firebase:<br /> 
+		<span ng-repeat="msg in ArrivalTime.firebaseStuff.list">
+			{{msg.message}} ({{msg.$id}}) <br>
+		</span>
+	</p>
+
+	<hr />
+
+	<input type="text" name="stop-code" ng-model="ArrivalTime.code"> 
+	<button ng-click="ArrivalTime.search()">Search</button>
+
+	<div>
+		<div ng-repeat="bus in ArrivalTime.service.list">
+			{{::bus.lineId}} {{ ::bus.destination}} -> {{bus.busTimeLeft | minutes | number:2 }}min ({{$index}})
+			<hr />
+		</div>
+
+		<span ng-if="ArrivalTime.service.list.length == 0">
+			Selecciona una parada
+		</span>
+
+		<span ng-show="!ArrivalTime.service.list">
+			No hay buses
+		</span>
+
+	</div>
+
+</div>
