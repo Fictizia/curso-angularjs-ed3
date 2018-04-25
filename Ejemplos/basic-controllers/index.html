@@ -1,0 +1,54 @@
+<html ng-app="app">
+	<head>
+		<title>Hola, Angular!</title>
+	</head>
+	<body>
+
+		<div ng-controller="nameController as Name">
+
+			<h1>Hola {{Name.user.name}} </h1>
+
+			Nombre: <input type="text" ng-model="Name.user.name" />
+
+			<button ng-click="Name.clear()">Clear</button>
+
+		</div>
+
+		<hr />
+
+		<div ng-controller="PokemonController as pkm">
+			
+			<h1>Pokemons!</h1>
+
+			<ul>
+				<li ng-repeat="elem in pkm.lista" ng-if="elem.name !== 'Gastly'">
+					{{ $index }} - {{ elem.name }}
+
+					<!-- Nos venimos arriba: Controladores en controladores -->
+					<div ng-controller="PokemonController as pk2">
+						<ul>
+							<li ng-repeat="elem2 in pk2.lista" ng-if="elem2.name !== 'Gastly'">
+								{{ $index }} 			<!-- el $index se reemplaza -->
+								 - {{ elem.name }} 		<!-- el elem se mantiene -->
+								 -> {{ elem2.name }}	<!-- el elem2 se crea -->
+							</li>
+						</ul>
+					</div>
+
+				</li>
+			</ul>
+
+		</div>
+
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+		<script type="text/javascript" src="js/app.js"></script>
+
+		<script type="text/javascript" src="controllers/name.js"></script>
+		<script type="text/javascript" src="controllers/pokemon.js"></script>
+
+		<script type="text/javascript" src="services/user.js"></script>
+
+	</body>
+</html>
